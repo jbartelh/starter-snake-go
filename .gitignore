@@ -1,1 +1,4 @@
 battlesnake-go
+.idea/
+*.iml
+out
