@@ -26,7 +26,7 @@ func TestDistanceBetweenTwoCoords(t *testing.T) {
 		a := api.Coord{tt.p1x, tt.p1y}
 		b := api.Coord{tt.p2x, tt.p2y}
 
-		assert.InEpsilon(t, tt.expected, distance(a, b), epsilon)
+		assert.InEpsilon(t, tt.expected, distance(&a, &b), epsilon)
 	}
 }
 
@@ -35,6 +35,6 @@ func TestDistanceBetweenTwoCoordsSwapped(t *testing.T) {
 		a := api.Coord{tt.p1x, tt.p1y}
 		b := api.Coord{tt.p2x, tt.p2y}
 
-		assert.InEpsilon(t, tt.expected, distance(b, a), epsilon)
+		assert.InEpsilon(t, tt.expected, distance(&b, &a), epsilon)
 	}
 }
